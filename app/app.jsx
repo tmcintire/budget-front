@@ -1,6 +1,12 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
-var {Route, Router, IndexRoute, hashHistory} = require('react-router');
+import React from 'react';
+import ReactDOM from 'react-dom';
+// ****** This is using DESTRUCTURING from ES6 *******
+import { Route, Router, IndexRoute, hashHistory } from 'react-router';
+
+import Main from 'Main';
+import Budget from 'Budget';
+import About from 'About';
+import Examples from 'Examples';
 
 // Load foundation
 $(document).foundation();
@@ -9,6 +15,14 @@ $(document).foundation();
 require('style!css!sass!applicationStyles')
 
 ReactDOM.render(
-  <p>Boilerplate 3 Project</p>,
+  <Router history={hashHistory}>
+  	<Route path="/" component={Main}>
+  		<Route path="about" component={About}/>
+  		<Route path="examples" component={Examples}/>
+  		<IndexRoute component={Budget}/>
+  	</Route>
+
+
+  </Router>,
   document.getElementById('app')
 );

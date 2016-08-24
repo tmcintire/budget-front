@@ -1,0 +1,34 @@
+.expense-table {
+  margin-left: 50px;
+
+  th {
+    width: 100%;
+  }
+}
+
+.amount {
+  text-align: right;
+}
+
+
+.table-header {
+  font-size: 1.5em;
+  width: 100%;
+  text-align: center;
+}
+
+.expenses-table-div{
+  float: left;
+  width: 50%;
+}
+
+.summary-div {
+  float: right;
+  margin-right: 50px;
+  width: 40%;
+}
+
+.totals-column {
+  font-weight: bold;
+  font-size: 1.3em;
+}
